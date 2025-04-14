@@ -1,0 +1,22 @@
+<suite name="ParallelSuite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="listeners.Listeners" />
+    </listeners>
+
+    <test name="Device1">
+        <parameter name="deviceName" value="emulator-5554"/>
+        <parameter name="platformVersion" value="11"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Device2">
+        <parameter name="deviceName" value="emulator-5556"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="udid" value="emulator-5556"/>
+        <classes>
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+</suite>
